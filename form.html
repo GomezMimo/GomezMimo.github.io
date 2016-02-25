@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8" />
+    	<title>Form</title>
+    	<style type="text/css" media="screen">
+	    	fieldset{
+				border: 1px  dotted gray;
+				padding-top: 30px;
+				padding-left: 50px;
+			}
+		
+			fieldset > p {				
+				font-size: 20px;
+				margin-bottom: 30px;				
+			}
+    		textarea{
+    			font-size: 16px;
+	    		width: 350px;
+	    		height: 120px;
+    		}
+    		
+    		input{	
+				border-radius: 5px;	
+				font-size: 16px;
+				float: right;
+				height: 18px;
+				margin-right: 700px;
+				width: 220px;							
+			}
+			
+			.button{	
+				float: none;
+				margin: 0px;
+				height: 30px;
+				width: 120px;				
+			}
+    	</style>
+    	<script type="text/javascript">
+    	
+	    </script>
+    </head>
+    <body>		
+    	<h1>Globant Bootcamp</h1>
+    	<form>
+    		<fieldset>
+    			<legend>Sign up</legend>
+    			<p>
+	    			<label>First name</label>
+	    			<input type="text" autofocus="autofocus"/>
+    			</p>
+    			<p>
+	    			<label>Last name</label>
+	    			<input type="text"/>
+    			</p>
+    			<p>
+	    			<label>Email</label>
+	    			<input type="email"/>
+    			</p>
+    			<p>
+    				<label>Birthday</label>
+	    			<input type="date"/>
+    			</p>
+    			<p>    			
+	    			<select>
+	    				<option value="" disabled selected>-- What's your favorite sport? --</option>
+	    				<option value="football">Football</option>
+	    				<option value="basketball">Basketball</option>
+	    				<option value="tennis">Tennis</option>
+	    				<option value="rugby">Rugby</option>
+	    				<option value="mma">MMA</option>
+	    			</select>
+    			</p>
+    			<p>
+	    			<textarea width="300" placeholder="Tell us about yourself."></textarea>
+    			</p>
+    			<p>
+    				<input type="submit" value="Send" class="button"/>
+    				<input type="reset" value="Reset" class="button"/>
+    			</p>
+    		</fieldset>
+    	</form>
+    </body>
+</html>
+
+<!--
+	
+	birthday, a dropdown to choose your favourite sport, and a text-area to include a small bio for the user. Add a button at the end to submit the form, and another one to clear the form. Add relevant validation rules for all fields (like required fields, valid email).
+-->
