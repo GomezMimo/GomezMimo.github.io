@@ -1,0 +1,157 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*CSS for the site*/
+
+body{
+	background: #343434;
+	color: white;
+	font-size: 14px;
+	font-family: verdana;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 1000px;
+}
+
+header, footer, aside, section, article, nav{
+	border-radius: 10px;
+}
+
+header{
+	background: #666;
+	font-size: 46px;
+	height: 100px;
+	margin-top: 10px; 		
+	text-align: center;
+	width: 100%;
+}
+
+nav{
+	background: #666;
+	color:white;
+	float: left;
+	font-size: 10px;
+	height: 500px;
+	margin-right: 50px;
+	margin-top: 20px;
+	width: 20%;
+}
+
+aside{
+	background: #666;
+	float: left;
+	font-size: 12px;
+	height: 500px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 20%;
+}
+
+section{
+	background: #666;
+	float: left;
+	font-size: 14px;
+	height: 480px;
+	margin-right: 50px;
+	margin-top: 20px;
+	padding: 10px;
+	width: 48%;	
+}
+
+	section > header{
+		background: #9a9a9a;
+		margin-bottom: 10px;		
+	}
+	
+	section > article{
+		background: #9a9a9a;
+		height: 200px;
+		margin-bottom: 10px;
+	}
+	
+	section > footer{		
+		background: #9a9a9a;
+		margin-top: 135px;
+	}
+
+
+.footer{
+	background: #666;
+	clear: both;
+	font-size: 10px;
+	height: 40px;
+	margin-top: 140px;
+	text-align: center;
+
+}
+
+
+/*All the elements that have the letter 'a' but do not finish with 'r' are going to have the following style*/
+*[class*="a"]{
+	color:blue;
+}
+
+/*All the elements that finish with the letter 'r' are going to have the following style*/
+*[class$="r"]{
+	color: magenta;
+}
+
+
+
+
+
+/*7.Imagine there is a declaration like class=”oh-no-inline-styles” style=”background:red” and you need to change the background to green without changing the inline style. How could you accomplish this?*/
+
+.oh-no-inline-styles{
+	color: green !important;
+}
+
+
