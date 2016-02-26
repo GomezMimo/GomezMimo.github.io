@@ -123,34 +123,34 @@ ul, lo{
 	list-style: none;
 }
 
-nav li a{
-	background: #6f7401;
-	color: white;
-	display: block;
-	text-decoration: none;
-	padding: 10px 15px;
-}
-
-nav li a:hover{
-	color: black;
-}
-
-nav > ul > li{
-	float:left;
-}
-
-nav li ul{	
-	position: absolute;
-	min-width: 140px;	  		
-}
-
-nav > ul > li ul{
-	display: none;
-}
-
-nav > ul > li:hover > ul{
- 	display: block;
-}
+	nav li a{
+		background: #6f7401;
+		color: white;
+		display: block;
+		text-decoration: none;
+		padding: 10px 15px;
+	}
+	
+	nav li a:hover{
+		color: black;
+	}
+	
+	nav > ul > li{
+		float:left;
+	}
+	
+	nav li ul{	
+		position: absolute;
+		min-width: 140px;	  		
+	}
+	
+	nav > ul > li ul{
+		display: none;
+	}
+	
+	nav > ul > li:hover > ul{
+	 	display: block;
+	}
 	
 /*Header section*/	
 
