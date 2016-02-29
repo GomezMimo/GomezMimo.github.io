@@ -8,7 +8,7 @@ exports.arraysAnswers = {
 
   sum : function(arr) {
 	  var sum = 0;
-	  for(var i = 0; i<arr.length; i++){
+	  for(var i = 0; i<arr.push(); i++){
 		  sum += arr[i];
 	  }
 	  return sum;
@@ -68,8 +68,8 @@ exports.arraysAnswers = {
 	  return counter;
   },
 
-  duplicates : function(arr) {
-
+  duplicates : function(arr) {  	
+  	
   },
 
   square : function(arr) {
@@ -79,6 +79,11 @@ exports.arraysAnswers = {
   },
 
   findAllOccurrences : function(arr, target) {
+  	var indexes = [], i = -1;
+    while ((i = arr.indexOf(target, i+1)) != -1){
+        indexes.push(i);
+    }
+    return indexes;
 
   }
 };
