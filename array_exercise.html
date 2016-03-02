@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8" />
+    	<title></title>
+    	<script type="text/javascript">    		
+    		var amount_number, from, to, button, number, result;
+    		var collection = [];
+			function init(){	
+				amount_number = document.getElementById("amount_number");	
+				from = document.getElementById("from");
+				to = document.getElementById("to");
+				result = document.getElementById("result");
+				
+				document.getElementById("button").addEventListener("click", function(){		
+					var amount = Number(amount_number.value);
+					var min = Number(from.value);
+					var max = Number(to.value);
+					for(var i = 0; i < amount; i++){
+						if(amount > (max-min)){
+							alert("Hey the amount should be minor than the difference between from and to");
+							break;
+						}else{
+							number = Math.floor(Math.random() * (max - min + 1) + min);
+							//alert(number);
+							if(collection.indexOf(number) == -1){
+							 	collection.push(number);
+						    }else{
+							    i--;
+						    }
+					    }
+				    }	    
+				    return result.innerHTML = "<strong>Random Numbers: </strong> <em>" + collection + "</em>";
+				});		
+			}	
+		</script>
+    </head>
+    <body>		
+    	<h1>So you say you want random numbers, eh?</h1>
+    	<p>
+	    	<label>Amount of numbers:</label>
+	    	<input type="number" id="amount_number"/>
+    	</p>
+    	<p>
+	    	<label>From:</label>
+	    	<input type="number" id="from"/>
+    	</p>
+    	<p>
+	    	<label>To:</label>
+	    	<input type="number" id="to"/>
+    	</p>
+    	<p>
+    		<input type="submit" value="send" id="button"/>
+    	</p>
+    	<div id="result">
+    		
+    	</div>
+    	<script>
+    		init();
+    	</script>
+    </body>
+</html>
