@@ -60,56 +60,6 @@ ul, lo{
 	list-style: none;
 }
 
-/*
-nav{
-	background: #6f7401;
-	border: 1px solid black;
-	border-radius: 8px;
-	overflow: hidden;
-	margin-top: 20px;
-	margin-bottom: 5px;
-	padding: 25px;
-}
-
-	nav > ul > li > a{
-		background: #6f7401;
-		color: white;
-		display: block;
-		float: left;
-		font-size: 18px;
-		list-style: none;
-		padding-right: 65px;
-		position: relative;
-		text-decoration: none;
-		
-	}
-	
-	nav > ul >li > a:hover{
-		color: black;
-		position:relative;
-		text-decoration: underline;
-	}
-	
-	nav li ul{
-	    		position: absolute;
-	    		min-width: 140px;	
-    		}
-    		
-    		nav > ul > li ul{
-    			background: #6f7401;
-	    		display: none;
-	    		position: absolute;
-	    		min-width: 140px;	
-	    		text-decoration: none;
-    		}    
-    		
-    		nav > ul > li:hover > ul{
-	    		display: block;
-    		}
-*/
-
-/*NAV section*/
-
 nav{	
 	background: #6f7401;	
 	border-radius: 8px;
