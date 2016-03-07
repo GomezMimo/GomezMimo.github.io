@@ -5,7 +5,7 @@ var a = 38;
 var b = 0.721;
 var d = 0.92;
 var e = 2.71828182;
-var ct1, ct2, m, b, t3, ct3, b2;
+var ct1, ct2, m, b, t3, ct3, b2, t1;
 
 /*Variables html*/
 var html = "";
@@ -36,6 +36,16 @@ document.getElementById("biseccion_2").addEventListener("click", function(){
 	html = "<table><tr><th>n</th><th>t1</th><th>c(t1)</th><th>t2</th><th>c(t2)</th><th>t3</th><th>c(t3)</th></tr>";
 	biseccion(0, 1, 0.92);
 });
+
+document.getElementById("newton_1").addEventListener("click", function(){
+	html = "<table><tr><th>n</th><th>t0</th><th>c(t0)</th><th>c'(t0)</th><th>x1</th></tr>";
+	newton(0, 0.45);
+})
+
+document.getElementById("newton_2").addEventListener("click", function(){
+	html = "<table><tr><th>n</th><th>t0</th><th>c(t0)</th><th>c'(t0)</th><th>x1</th></tr>";
+	newton(0, 0.92);
+})
 
 /*Función de bisección*/
 function secante(t1, t2, cx){	
@@ -94,7 +104,22 @@ function biseccion(t1, t2, cx){
 
 /*Función de Newton Rapshon*/
 
+function newton(t1, cx){
+	var contador = 1;
+	ct1 = 1;
+	ct2 = 1;
+	while(ct1 != 0){
+		ct1 = ( B * ( 1 - Math.pow(e, -a * t1)) + A * Math.pow(e,-b*t1) - cx * B);
+		ct2 = a * B * Math.pow(e, -a*t1) - b * Math.pow(e, -b*t1) * 0 * Math.pow(e, -b*t1);
+		t2 = t1 - (ct1 / ct2);
+		t1 = t2;
+		html += "<tr><td>"+ (contador) +"</td><td>"+ t1.toFixed(4) +"</td><td>" + ct1 +"</td><td>"+ ct2.toFixed(16) +"</td><td>"+ t2.toFixed(4);						
+		contador++;
+	}	
+	return contenedor.innerHTML = html + "</table>";
+}
 
+//
 
 
 
