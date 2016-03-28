@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+    	<meta charset="utf-8" />
+    	<title>Reactor Quimico</title>
+    	<link rel="stylesheet" href="styles/reactor_style.css"/>    	
+    </head>
+    <body>		
+    	<header>
+    		<img src="images/background-2.png"/>
+    	</header>
+    	<nav>
+    		<ul>
+    			<li><a href="#" id="inicio">Inicio</a></li>
+    			<li>
+	    			<a href="#">Ejercicio 1</a>
+	    			<ul>
+	    				<li><a href="#" id="secante_1">Método  de la secante</a></li>
+	    				<li><a href="#" id="biseccion_1">Método  de bisección</a></li>
+	    				<li><a href="#" id="newton_1">Método  de Newton Rapshon</a></li>
+	    			</ul>
+    			</li>
+    			<li>
+	    			<a href="#">Ejercicio 2</a>
+	    			<ul>
+	    				<li><a href="#" id="secante_2">Método  de la secante</a></li>
+	    				<li><a href="#" id="biseccion_2">Método  de bisección</a></li>
+	    				<li><a href="#" id="newton_2">Método  de Newton Rapshon</a></li>	
+	    			</ul>
+    			</li>  
+    			<li>
+    				<a href="#" id="resultados">Resultados</a>
+    			</li>  			
+    		</ul>
+    	</nav>
+    	<section>
+    		<div id="contenedor">					
+	    		<h2>PROBLEMA:</h2>
+		    	<p>La siguiente ecuación permite calcular la concentración de un químico en un reactor donde se tiene una mezcla completa:</p>
+		    	<img src="images/background.png"/ height="70" />    
+		    	<p>Si la concentración inicial es C0 =A y la concentración de entrada es Cent = B. Calcule:</p>		
+		    	<p id="listas">
+			    	<p>1. El tiempo que le toma a la concentración llegar a la condición -> C(t)= 0.5 * Cent </p>
+			    	<p>2. El tiempo que le toma a la concentración llegar a la condición -> C(t) = d * Cent </p>
+		    	</p>
+		    	<table id="table-data">
+		    		<tr>
+		    			<td>a = 38</td>
+		    			<td>b = b</td>
+		    			<td>d = 0.92</td>
+		    		<tr>	
+		    		<tr>
+		    			<td>A = 0.281</td>
+		    			<td>B = 5</td>
+		    			<td>Grupo No = 88</td>
+		    		<tr>
+		    	</table>
+    		</div>
+    	</section>
+    	<footer>
+			.:: All Rights reserved to Juan Gómez ::.    	
+    	</footer>
+    	<script type="text/javascript" src="scripts/script.js">    	
+		</script>
+    </body>
+</html>
+
+
+<!--
+	Conclusiones.
+	
+	1. No importa el método que se use, el resultado siempre va a dar igual, la única variente es el número de pasos que gasta cada uno de estos. 
+	2. El metodo de bisección fue el que gastó mas pasos en el ejercicio 1.
+	3. El metodo de la secante fue el que gastó mas pasos en el ejercicio 2.
+	4. EL metodo de Newton fue el que gastó menos pasos en ambos ejercicios. 
+	5. El método de Newton aunque resulta un poco mas dificil al tener que derivar la función original, los resultados se obtienen mas rápido. 
+-->
+
+
+
