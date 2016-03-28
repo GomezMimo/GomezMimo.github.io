@@ -1,0 +1,175 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*CSS for the site*/
+
+@font-face{
+	font-family: signature;
+	src: url('../fonts/signature1.ttf');
+}
+
+body{
+	background: black;
+	font-family: arial;
+	font-size: 16px;
+	margin: 0px auto;
+	width: 1000px;
+}
+
+#container{
+	border: 1px solid black;
+	border-radius: 4px;
+	background: #fff;
+	margin: 30px auto;
+	padding:30px;
+	width: 600px;
+
+}
+
+#container > header{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 40px;
+	text-align: center;
+	text-shadow: 2px 2px 4px gray;
+}
+
+#information{
+	margin-bottom: 30px;	
+}
+
+#information label{
+    display: inline-block;
+    float: left;
+    font-size: 18px;    
+    margin-bottom: 20px;
+    margin-right: 40px;
+    width: 220px;
+    text-align: right;
+}
+
+#information input{
+	font-size: 16px;
+	height: 18px;
+	margin-bottom: 20px;
+	width: 200px;
+}
+
+#badge{
+	border:1px solid #000;
+	border-radius: 2px;
+	box-shadow: 2px 2px 4px #000;
+	margin: 40px auto;
+	overflow: hidden;
+	padding: 0px;
+	width: 450px;
+}
+
+#{
+	border: 1px solid #ffd700;	
+}
+
+	#info > div{
+		border: 0px solid #ffd700;	
+		padding-left: 20px;
+	}
+
+	#badge > #info  p{
+		font-weight: ;
+		margin-bottom: 15px;
+	}
+
+	#country > h1{
+		font-size: 20px;	
+		font-weight: bold;
+	}
+
+	header > h2{
+		font-size: 14px;	
+		font-style: italic;
+	}
+
+.label{
+	font-size: 12px;
+	font-weight: none !important;
+}
+
+#img > img{
+	border-radius: 50%;
+	float: right;
+	margin-right: 20px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	width: 180px;
+}
+
+#tales{
+	float:left;	
+}
+
+#signature{
+	/*display: none;*/
+	font-family: signature;
+	font-size: 32px;	
+}
+
+#signature_button{
+	font-size: 12px !important;
+	margin-left: 130px;	
+	width: 120px !important;
+}
+
+#country_text, #firstname_text, #lastname_text, #id_text {
+	text-transform: uppercase;
+}
+
+input[type = "button"]{
+	margin-right: 20px;
+}

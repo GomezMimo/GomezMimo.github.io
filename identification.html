@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles/identification.css"/>
+		<title>Create your own identification</title>
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/identification.js"></script>				
+	</head>
+	<body>		
+		<div id="container">
+			<header>
+				<h1>Identification</h1>
+			</header>
+			<section id="information">
+				<form>
+					<p>
+						<label>First Name: </label>
+						<input type="text" placeholder="Your name" autofocus="autofocus" id="firstname">	
+					</p>
+					<p>
+						<label>Last Name: </label>
+						<input type="text" placeholder="Your lastname" id="lastname">	
+					</p>
+					<p>
+						<label>ID number: </label>
+						<input type="text" placeholder="Your identification" id="id"> 	
+					</p>
+					<p>
+						<label>Country: </label>
+						<input type="text" placeholder="Your Country" id="country">	
+					</p>					
+				</form>
+			</section>			
+			<input type="button" id="signature_button" value="Generate signature"/>
+			<input type="button" id="image_button" value="Upload image"/>							
+			<input type="button" id="image_button" value="Change background"/>
+			<hr>
+			<section id="badge">									
+				<div id="info">
+					<div id="tales">
+						<p>
+						<header>
+							<h1 id="country_text"></h1>
+							<h2>PERSONAL IDENTIFICATION</h2>
+						</header>
+						</p>
+						<p><span class="label">ID:</span><span id="id_text"></span></p>
+						<p><span id="lastname_text"></span><br/><span class="label">Last Name</span></p>
+						<p><span id="firstname_text"></span><br/><span class="label">First Name</span></p>
+						<p>
+							<span id="signature">								
+							</span>
+						</p>																										
+					</div>	
+					<div id="img">
+						<img src="http://cos.h-cdn.co/assets/15/25/1434726176-tom.jpg">
+					</div>				
+				</div>				
+			</section>
+		</div>			
+	</body>
+</html>
