@@ -32,7 +32,7 @@
 	var myWeather = new App.Models.Weather({		
 		city: "Bogota",
 		country: "Colombia",
-		sky: "sky",
+		sky: "Broken clouds",
 		temperature: "34 ºc",
 		wind: "10 m/s",
 		clouds: "clouds"				
@@ -49,7 +49,7 @@
 			this.city = options.city;
 			this.data = this.fetch();
 			//console.log(this.response);			
-			//console.log(this.data);
+			console.log(this.data);
 		},
 		parse: function(response){
 			var response = response;
