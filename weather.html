@@ -21,20 +21,20 @@
 		<section>
 			<form>
 				<p>
-					<input type="text" id="city" placeholder="What's the weather in..."/>
+					<input type="text" id="city" placeholder="What's the weather in ff..."/>
 				</p>
 				<p>
 					<input type="button" id="button" value="Search"/>
 				</p>				
 			</form>
-		</section>
+		</section>		
 		<script type="text/template" id="weatherContainer">
-			City: <%= city %> <br>
-			Country: <%= country %> <br>
-			Sky: <%= sky %> <br>
-			Temperature: <%= temperature %><br>
-			Wind: <%= wind %><br>
-			Clouds: <%= clouds %> <br>
+			<li class="items"><span>City: </span><%= city %> </li>
+			<li class="items"><span>Country: </span><%= country %> </li>
+			<li class="items"><span>Sky: </span><%= sky %>  </li>
+			<li class="items"><span>Temperature:</span> <%= temperature %></li>
+			<li class="items"><span>Wind: </span><%= wind %></li>
+			<li class="items"><span>Clouds:</span> <%= clouds %> </li>
 		</script>
 		<div id="container">				 	
 		</div>	

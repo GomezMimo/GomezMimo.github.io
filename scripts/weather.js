@@ -3,39 +3,33 @@
 		Models: {},
 		Views: {},
 		Collections:{}
-	},
-
-	window.template = function(id){
-		return _.template($('#' + id ).html());
-	}
+	};	
 
 	//Single Model
 	App.Models.Weather = Backbone.Model.extend({});
 
 	//Single View
 	App.Views.Weather = Backbone.View.extend({
-		tagName: 'p',
-		template: template('weatherContainer'),		
+		tagName: 'ul',
+		template: _.template($('#weatherContainer').html()),		
 		render: function(){
 			var template = this.template(this.model.toJSON());			
 			this.$el.append(template);
 			$('#button').on('click', function(){
 				var city = $('#city').val();
-				var CollectionValue = new App.Collections.Weather({city: city});
-				//var setData = new App.Views.setData({collection: CollectionValue});
-				//setData.render();
+				var CollectionValue = new App.Collections.Weather({city: city});				
 			});			
 			return this;
 		}
 	});	
 
 	var myWeather = new App.Models.Weather({		
-		city: "Bogota",
-		country: "Colombia",
-		sky: "Broken clouds",
-		temperature: "34 ºc",
-		wind: "10 m/s",
-		clouds: "clouds"				
+		city: "",
+		country: "",
+		sky: "",
+		temperature: "",
+		wind: "",
+		clouds: ""				
 	});
 
 
@@ -51,13 +45,24 @@
 			//console.log(this.response);			
 			console.log(this.data);
 		},
-		parse: function(response){
-			var response = response;
-			console.log(response);						
-			return response;
+		parse: function(response){			
+			updateTemplate(response);
+			console.log(response);
 		}
-	});
-	
+	});	
 	var myWeatherView = new App.Views.Weather({model: myWeather});
-	$('#container').append(myWeatherView.render().el);
+	$('#container').html(myWeatherView.render().el);
+
+	//Gets the data and update it
+	var updateTemplate = function(data){
+		myWeather.attributes.city = data.name;
+		myWeather.attributes.country = data.sys.country;
+		myWeather.attributes.sky = data.weather[0].description;
+		myWeather.attributes.temperature = (data.main.temp  - 273.15).toFixed(2) + " ºC";
+		myWeather.attributes.wind = data.wind.speed + "m/s";
+		myWeather.attributes.clouds = data.clouds.all + "%";
+		var myWeatherView = new App.Views.Weather({model: myWeather});
+		$('#container').html(myWeatherView.render().el);
+	}
 })();
+

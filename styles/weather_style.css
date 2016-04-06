@@ -90,12 +90,17 @@ footer{
 	text-align: right;
 }
 
-ul{
-
+.items{
+	display: block;
+	font-size: 20px;
+	letter-spacing: 1px;
+	margin-top: 15px;
 }
 
-li{
-	display: block;	
+.items > span {
+	font-weight: bold;
+	margin-right: 5px;
+
 }
 
 
