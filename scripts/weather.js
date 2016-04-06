@@ -52,7 +52,8 @@
 			//console.log(this.data);
 		},
 		parse: function(response){
-			var response = response;						
+			var response = response;
+			console.log(response);						
 			return response;
 		}
 	});
