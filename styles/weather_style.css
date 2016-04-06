@@ -61,6 +61,7 @@ div > p {
 
 #container{
 	height: 430px;
+	text-align: left;
 }
 
 footer{	
@@ -87,6 +88,14 @@ footer{
 #time{	
 	margin-top: 20px;
 	text-align: right;
+}
+
+ul{
+
+}
+
+li{
+	display: block;	
 }
 
 

@@ -1,67 +1,62 @@
-var KEY = "619fd2925e4faf1e88d8aeab7a85a627";
+(function(){
+	window.App = {
+		Models: {},
+		Views: {},
+		Collections:{}
+	},
 
+	window.template = function(id){
+		return _.template($('#' + id ).html());
+	}
 
-function getCityValue(){
-	return $('#city').val();
-}
+	//Single Model
+	App.Models.Weather = Backbone.Model.extend({});
 
-function getWeatherUrl(city){
-	var WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=" + KEY;
-	return WEATHER_URL;
-}
+	//Single View
+	App.Views.Weather = Backbone.View.extend({
+		tagName: 'p',
+		template: template('weatherContainer'),		
+		render: function(){
+			var template = this.template(this.model.toJSON());			
+			this.$el.append(template);
+			$('#button').on('click', function(){
+				var city = $('#city').val();
+				var CollectionValue = new App.Collections.Weather({city: city});
+				//var setData = new App.Views.setData({collection: CollectionValue});
+				//setData.render();
+			});			
+			return this;
+		}
+	});	
 
-function getWeather(city){
-	$('#container').html("");
-	return $.ajax({
-		url: getWeatherUrl(getCityValue()),
-		method: "GET",
-		data:{q: city}		
-	}).done(function(data){		
-		$('#container').html("<p><span class='property'>City: </span><span class='value'>"+ data.name + "</span></p><p><span class='property'>Country: </span><span class='value'> " + data.sys.country +"</span></p>");		
-		$.each(data.weather, function(key, value){
-			var html = "<p><span class='property'>Sky: </span><span class='value'>" + value.description + "</span></p>";
-			$('#container').append(html);
-		});		
-		$('#container').append("<p><span class='property'>Temperature: </span><span class='value'>" + (data.main.temp - 273.15).toFixed(2) + " </span>ºC</p><p><span class='property'>Wind: </span><span class='value'>" + data.wind.speed + "</span> m/s</p><p><span class='property'>Clouds: </span><span class='value'>" + data.clouds.all + "</span>%</p>");					
-	});
-}
-
-$(document).ready(function(){
-	$('#button').on('click', function(){				
-		getWeather(getCityValue());
-	});
-});
-
-/*
-(function(){	
-	var ModelWeather = Backbone.Model.extend({
-		initialize: function(){
-         console.info("Inicializando el clima socio");
-      },
-      defaults:{
-			KEY: "619fd2925e4faf1e88d8aeab7a85a627"				
-		}      
+	var myWeather = new App.Models.Weather({		
+		city: "Bogota",
+		country: "Colombia",
+		sky: "sky",
+		temperature: "34 ºc",
+		wind: "10 m/s",
+		clouds: "clouds"				
 	});
 
-	var weather = new ModelWeather({			
-		getCityValue: function(){
-			return $('#city').val();
+
+	//Collection
+	App.Collections.Weather = Backbone.Collection.extend({
+		url: function(){
+			var link = "http://api.openweathermap.org/data/2.5/weather?q="+ this.city +"&appid=619fd2925e4faf1e88d8aeab7a85a627";
+			return link;
+		},		
+		initialize: function(options){
+			this.city = options.city;
+			this.data = this.fetch();
+			//console.log(this.response);			
+			//console.log(this.data);
 		},
-
-		getWeatherURL: function(){
-			
-			return "hola mundo";
+		parse: function(response){
+			var response = response;						
+			return response;
 		}
 	});
 	
-	console.log(weather.KEY);
-	console.log(weather.get('KEY'));
-	console.log(weather.get(getWeatherURL));
+	var myWeatherView = new App.Views.Weather({model: myWeather});
+	$('#container').append(myWeatherView.render().el);
 })();
-
-
-/*
-	defaults:{
-			weather_url: "http://api.openweathermap.org/data/2.5/weather?q=&appid=619fd2925e4faf1e88d8aeab7a85a627"				
-		}	
-*/

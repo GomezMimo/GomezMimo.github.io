@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/normalize.css">		
 		<link rel="stylesheet" href="styles/weather_style.css"/>
-		<script type="text/javascript" src="scripts/jquery-1.12.2.min.js"></script>
-		<script type="text/javascript" src="scripts/underscore.js"></script>
-		<script type="text/javascript" src="scripts/backbone.js"></script>
+		<script type="text/javascript" src="scripts/libs/jquery-1.12.2.min.js"></script>
+		<script type="text/javascript" src="scripts/libs/underscore.js"></script>
+		<script type="text/javascript" src="scripts/libs/backbone.js"></script>
 		<title>What's the weather?</title>		
 		</script>
 	</head>
@@ -28,7 +28,15 @@
 				</p>				
 			</form>
 		</section>
-		<div id="container">			
+		<script type="text/template" id="weatherContainer">
+			City: <%= city %> <br>
+			Country: <%= country %> <br>
+			Sky: <%= sky %> <br>
+			Temperature: <%= temperature %><br>
+			Wind: <%= wind %><br>
+			Clouds: <%= clouds %> <br>
+		</script>
+		<div id="container">				 	
 		</div>	
 		<footer>
 			.:: All rights reserved to Juan Gómez ::.
@@ -37,3 +45,13 @@
 		<script type="text/javascript" src="scripts/time.js"></script>
 	</body>
 </html>
+
+<!--
+	City: Bogota
+Country: CO
+Sky: light rain
+Temperature: 15.83 ºC
+Wind: 1.16 m/s
+Clouds: 76%
+
+-->

@@ -14,7 +14,8 @@ var modelTime = new Backbone.Model({
 });
 
 var viewTime = new RefreshingTime({
-	model: modelTime, el: '#time'
+	model: modelTime, 
+	el: '#time'
 });
 viewTime.render();
 
