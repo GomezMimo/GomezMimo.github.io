@@ -4,19 +4,27 @@
 			[
 				{
 					sky : 'clear sky', 
-					image: 'images/weather/clearsky.png'
+					image: 'images/weather/sunny.png'
 				},
 				{
 					sky : 'broken clouds', 
-					image: 'images/weather/clearsky.png'
+					image: 'images/weather/rain.png'
 				},
 				{
 					sky : 'few clouds', 
-					image: 'images/weather/clearsky.png'
+					image: 'images/weather/fewClouds.png'
+				},				
+				{
+					sky: 'overcast clouds',
+					image: 'images/weather/cloudy.png'
 				},
 				{
-					sky : 'clear sky', 
-					image: 'images/weather/clearsky.png'
+					sky: 'light rain',
+					image: 'images/weather/rain.png'
+				},
+				{
+					sky: 'thunderstorm',
+					image: 'images/weather/rain.png'
 				}
 			]
 	}
@@ -86,13 +94,31 @@
 			myWeather.attributes.temperature = (data.main.temp  - 273.15).toFixed(2) + " ºC";
 			myWeather.attributes.wind = data.wind.speed + "m/s";
 			myWeather.attributes.clouds = data.clouds.all + "%";
-			myWeatherView = new App.Views.Weather({model: myWeather});
-			$('#container').html(myWeatherView.render().el);
+			myWeatherView = new App.Views.Weather({model: myWeather});								
+			//updateImage(myWeather);
+/*
+		a.each(function(value, idx){ console.log(value + " : " + idx); })
+*/			$('#container-data').html(myWeatherView.render().el);	
+			weatherStatus.states.forEach(function(state){
+				if(state.sky == myWeather.attributes.sky){					
+					var template = _.template($('#weatherImage').html());										
+					var html = template({image: state.image});			
+					$('#container-image').html(html);
+				}
+			});
+			
 		}else{
-			$('#container').html("The city that you were looking for doesn't exist!!");
+			$('#container-data').html("The city that you were looking for doesn't exist!!");
 		}
 	}
+
+	var updateImage = function(data){
+		
+	}
+
+
+
 	var myWeatherView = new App.Views.Weather({model: myWeather});	
-	$('#container').html(myWeatherView.render().el);
+	$('#container-data').html(myWeatherView.render().el);
 })();
 

@@ -16,7 +16,7 @@
 			Hello I'm the time.fasdfasdfasfd
 		</div>
 		<header>
-			<img src="images/banner_.png"/>
+			<img src="images/weather-img.png"/>
 		</header>
 		<section>
 			<form>
@@ -27,20 +27,25 @@
 					<input type="button" id="button" value="Search"/>
 				</p>				
 			</form>
-		</section>		
-		<script type="text/template" id="weatherContainer">
+		</section>					
+		<div id="container">				 	
+			<div id="container-data"></div>
+			<div  id="container-image"></div>
+		</div>	
+		<footer>
+			.:: All rights reserved to Juan Gómez ::.
+		</footer>	
+		<script type="text/template" id="weatherContainer">			
 			<li class="items"><span>City: </span><%= city %> </li>
 			<li class="items"><span>Country: </span><%= country %> </li>
 			<li class="items"><span>Sky: </span><%= sky %>  </li>
 			<li class="items"><span>Temperature:</span> <%= temperature %></li>
 			<li class="items"><span>Wind: </span><%= wind %></li>
 			<li class="items"><span>Clouds:</span> <%= clouds %> </li>
-		</script>
-		<div id="container">				 	
-		</div>	
-		<footer>
-			.:: All rights reserved to Juan Gómez ::.
-		</footer>	
+		</script>		
+		<script type="text/template" id="weatherImage">						
+			<img src="<%= image %>"  />
+		</script>	
 		<script type="text/javascript" src="scripts/weather.js"></script>
 		<script type="text/javascript" src="scripts/time.js"></script>
 	</body>
