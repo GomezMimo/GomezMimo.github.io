@@ -68,8 +68,7 @@
 			console.log(this.data);
 		},
 		parse: function(response){			
-			updateTemplate(response);
-			console.log(response);
+			updateTemplate(response);			
 		}
 	});		
 	
@@ -94,11 +93,8 @@
 			myWeather.attributes.temperature = (data.main.temp  - 273.15).toFixed(2) + " ºC";
 			myWeather.attributes.wind = data.wind.speed + "m/s";
 			myWeather.attributes.clouds = data.clouds.all + "%";
-			myWeatherView = new App.Views.Weather({model: myWeather});								
-			//updateImage(myWeather);
-/*
-		a.each(function(value, idx){ console.log(value + " : " + idx); })
-*/			$('#container-data').html(myWeatherView.render().el);	
+			myWeatherView = new App.Views.Weather({model: myWeather});	
+			$('#container-data').html(myWeatherView.render().el);	
 			weatherStatus.states.forEach(function(state){
 				if(state.sky == myWeather.attributes.sky){					
 					var template = _.template($('#weatherImage').html());										
@@ -108,16 +104,9 @@
 			});
 			
 		}else{
-			$('#container-data').html("The city that you were looking for doesn't exist!!");
+			$('#container-data').html("The city that you are looking for doesn't exist!!");
 		}
 	}
-
-	var updateImage = function(data){
-		
-	}
-
-
-
 	var myWeatherView = new App.Views.Weather({model: myWeather});	
 	$('#container-data').html(myWeatherView.render().el);
 })();
