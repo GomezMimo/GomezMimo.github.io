@@ -107,8 +107,9 @@ footer{
 }
 
 #container-data{
-	width: 300px;
+	width: 400px;
 	float: left;
+	text-align: left;
 }
 
 #container-image{
