@@ -25,6 +25,10 @@
 				{
 					sky: 'thunderstorm',
 					image: 'images/weather/rain.png'
+				},
+				{
+					sky: 'scattered clouds',
+					image: 'images/weather/sunny.png'
 				}
 			]
 	}
