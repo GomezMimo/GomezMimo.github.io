@@ -49,7 +49,7 @@ input[type="button"]:active{
 
 div{
 	display: block;		
-	margin-top: 30px;	
+	margin-top: 10px;	
 	text-align: center;
 }
 
@@ -59,8 +59,8 @@ div > p {
 	text-align: left;
 }
 
-#container-data{
-	width: 420px;
+#container{
+	width: 100%;
 	text-align: left;
 }
 
