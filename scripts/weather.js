@@ -29,6 +29,14 @@
 				{
 					sky: 'scattered clouds',
 					image: 'images/weather/sunny.png'
+				},
+				{
+					sky: 'moderate rain',
+					image: 'images/weather/rain.png'
+				},
+				{
+					sky: 'Light intensity drizzle',
+					image: 'images/weather/rain.png'
 				}
 			]
 	}
