@@ -35,7 +35,7 @@
 					image: 'images/weather/rain.png'
 				},
 				{
-					sky: 'Light intensity drizzle',
+					sky: 'light intensity drizzle',
 					image: 'images/weather/rain.png'
 				}
 			]
@@ -77,7 +77,7 @@
 			this.city = options.city;
 			this.data = this.fetch();
 			//console.log(this.response);			
-			console.log(this.data);
+			//console.log(this.data);
 		},
 		parse: function(response){			
 			updateTemplate(response);			
